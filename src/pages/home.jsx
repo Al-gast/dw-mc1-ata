@@ -4,18 +4,19 @@ import contact from '../dummy/contact';
 
 export default function home() {
   return (
-    <div className="App">
+    <div>
       {contact?.map((item, index) => (
         <div key={index}>
-            <Link to="/detail/${item.id}">
-            <div>
-                <img src={item.image} alt="image" />
+            <Link to={`/detail/${item.id}`}>
+                <div>
+                    <img src={item.image} alt="image" />
                 <div>
                     <p>@{item.username}</p>
                     <p>followers{item.follower}</p>
+                </div> 
                 </div>
-            </div>
             </Link>
+               
         </div>
       ))}
     </div>

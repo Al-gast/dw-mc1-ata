@@ -7,21 +7,19 @@ export default function Detail() {
     const data = contact[parseInt(params.id - 1)]
   return (
     <div>
-        <div>
-            <img src={data.image} alt="image" />
+        <img src={data.image} alt="image" />
             <p>{data.username}</p>
-            <div>
-                <p>
-                    {data.follower}
-                </p>
-                <p>
-                    {data.following}
-                </p>
-            </div>
-            <div>
-                <p>followers</p>
-                <p>following</p>
-            </div>
+        <div>
+            <p>
+                {data.follower}
+            </p>
+            <p>
+                {data.following}
+            </p>
+        </div>
+        <div>
+            <p>followers</p>
+            <p>following</p>
         </div>
     </div>
   )
